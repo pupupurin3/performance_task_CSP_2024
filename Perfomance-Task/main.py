@@ -25,8 +25,8 @@ gameScreen = pg.display.set_mode([screen_width, screen_height])
 pg.display.set_caption("Pancake Stacker!!!")
 
 #font downloaded from: https://www.dafont.com/grand9k-pixel.font
-font = pg.font.Font("C:/Users/noahm/Downloads/Code/Performance Task/Perfomance-Task/Grand9K Pixel.ttf", 50)
-large_font = pg.font.Font("C:/Users/noahm/Downloads/Code/Performance Task/Perfomance-Task/Grand9K Pixel.ttf", 90)
+font = pg.font.Font("Perfomance-Task/Grand9K Pixel.ttf", 50)
+large_font = pg.font.Font("Perfomance-Task/Grand9K Pixel.ttf", 90)
 
 #Class 
 class gameObject(): #Creates Game Objects
