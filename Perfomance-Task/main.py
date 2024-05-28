@@ -25,8 +25,8 @@ gameScreen = pg.display.set_mode([screen_width, screen_height])
 pg.display.set_caption("Pancake Stacker!!!")
 
 #font downloaded from: https://www.dafont.com/grand9k-pixel.font
-font = pg.font.Font("Perfomance-Task/Grand9K Pixel.ttf", 50)
-large_font = pg.font.Font("Perfomance-Task/Grand9K Pixel.ttf", 90)
+font = pg.font.Font("Perfomance-Task/Assets/fonts/Grand9K Pixel.ttf", 50)
+large_font = pg.font.Font("Perfomance-Task/Assets/fonts/Grand9K Pixel.ttf", 90)
 
 #Class 
 class gameObject(): #Creates Game Objects
@@ -90,7 +90,7 @@ class Stack:
         self.stack = []
         self.initSize = 10
         for i in range(self.initSize):
-            newPancake = Sprite(screen_width/2, screen_height - i*pancakeH, pg.image.load("Perfomance-Task/images/pancakes.png"), speed)
+            newPancake = Sprite(screen_width/2, screen_height - i*pancakeH, pg.image.load("Perfomance-Task/Assets/images/pancakes.png"), speed)
             self.stack.append(newPancake)
 
     def show(self):
@@ -109,7 +109,7 @@ class Stack:
         if score%4 == 0:
             speed = speed*1.2
 
-        newPancake = Sprite(screen_width, screen_height - 10*pancakeH, pg.image.load("Perfomance-Task/images/pancakes.png"), speed)
+        newPancake = Sprite(screen_width, screen_height - 10*pancakeH, pg.image.load("Perfomance-Task/Assets/images/pancakes.png"), speed)
         self.initSize += 1
         self.stack.append(newPancake)  
 
@@ -128,11 +128,11 @@ class Stack:
         for i in range(self.initSize):
             self.stack[i].rect.y += pancakeH
 
-Start_Button = gameObject(screen_width/3, screen_height*4.1/5, pg.image.load("Perfomance-Task/images/Play.png"), 0.35)
-Exit_Button = gameObject(screen_width*2/3, screen_height*4.1/5, pg.image.load("Perfomance-Task/images/Exit.png"), 0.35)
-Restart_Button = gameObject(screen_width/3, screen_height*3/4, pg.image.load("Perfomance-Task/images/Restart.png"), 0.35)
-Home_Button = gameObject(screen_width*2/3, screen_height*3/4, pg.image.load("Perfomance-Task/images/home.png"), 0.35)
-Game_Title = gameObject(screen_width/2, screen_height*1.7/4, pg.image.load("Perfomance-Task/images/title.png"), 1.05)
+Start_Button = gameObject(screen_width/3, screen_height*4.1/5, pg.image.load("Perfomance-Task/Assets/images/Play.png"), 0.35)
+Exit_Button = gameObject(screen_width*2/3, screen_height*4.1/5, pg.image.load("Perfomance-Task/Assets/images/Exit.png"), 0.35)
+Restart_Button = gameObject(screen_width/3, screen_height*3/4, pg.image.load("Perfomance-Task/Assets/images/Restart.png"), 0.35)
+Home_Button = gameObject(screen_width*2/3, screen_height*3/4, pg.image.load("Perfomance-Task/Assets/images/home.png"), 0.35)
+Game_Title = gameObject(screen_width/2, screen_height*1.7/4, pg.image.load("Perfomance-Task/Assets/images/title.png"), 1.05)
 
 
 def terminate():
